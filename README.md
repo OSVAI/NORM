@@ -1,2 +1,2 @@
 # MORM
-MORM is a new learning framework to boost the performance of efficient neural networks
+Note: Code and models will be released soon.
