@@ -1,2 +1,2 @@
 # NORM
-Note: Code and models will be released.
+Note: Code and models will be coming.
