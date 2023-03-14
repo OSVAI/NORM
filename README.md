@@ -4,8 +4,8 @@ NORM, the first knowledge distillation work with a novel N-to-One Representation
 This repo hosts the code for implementing the NORM algorithm.
 
 
-## Required hardware
-Most of our experiments runs on 2 Nvidia 3090 GPUs for ImageNet and single 8G GPU can sufficient for CIFAR experiments. 
+% ## Required hardware
+% Most of our experiments runs on 2 Nvidia 3090 GPUs for ImageNet and single 8G GPU can sufficient for CIFAR experiments. 
 
 ## Installation
 
