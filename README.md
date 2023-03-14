@@ -3,10 +3,6 @@
 NORM, the first knowledge distillation work with a novel N-to-One Representation Matching formulation, which can be readily used to boost the performance of efficient neural networks for different visual recognition tasks.
 This repo hosts the code for implementing the NORM algorithm.
 
-
-<--- ## Required hardware -->
-% Most of our experiments runs on 2 Nvidia 3090 GPUs for ImageNet and single 8G GPU can sufficient for CIFAR experiments. 
-
 ## Installation
 
 This framework is implemented under Pytorch 1.10.1, Python 3.8.5 and CUDA 11.6. It's better to implement an independent virtual environment on machine. 
