@@ -1,4 +1,4 @@
-# NORM: Knowledge Distillation via N-to-One Representation Matching
+# Knowledge Distillation via N-to-One Representation Matching (NORM, for short)
 
 By Xiaolong Liu, Lujun Li, Chao Li and Anbang Yao.
 
