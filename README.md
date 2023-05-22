@@ -125,10 +125,10 @@ Our representative student models trained by NORM can be downloaded from the fol
 
 Our representative student models trained on CIFAR-100 (see the above Table 1). The teacher and student have the same type network architectures.
 
-| Teacher  |                                            wrn-40-2                                            |                                            wrn-40-2                                             | resnet56  |  resnet110   | resnet110 | resnet32x4 |   vgg13   |
-|----------|:----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:---------:|:------------:|:---------:|:----------:|:---------:|
-| Student  |                                            wrn-16-2                                            |                                            wrn-40-1                                             | resnet20  |  	resnet20   | 	resnet32 | resnet8x4  |   vgg8    |
-| accuracy |[75.83](https://drive.google.com/file/d/1pX_bB2pERyKvM_HZVd39XTApUkaB-M1z/view?usp=share_link)  | [75.08](https://drive.google.com/file/d/1G5ZLFzWpb3QArxmDC294C39iekuRI2v0/view?usp=share_link) | [71.45](https://drive.google.com/file/d/1IkUTkivcB2bDuTr_KCxcSh4Cv67eYYtF/view?usp=share_link) | 	  [71.73](https://drive.google.com/file/d/1AdELKGnAYkVRckSdZgHz79Wt2tVn_oym/view?usp=share_link) | [73.65](https://drive.google.com/file/d/1UoTTI3ZVJ_E-WUeLG0b3aprXRgZESrwW/view?usp=share_link) | [76.74](https://drive.google.com/file/d/178rE0i-32pejRJnwtSpNozjQpJGOjn8z/view?usp=share_link)  | [74.19](https://drive.google.com/file/d/1oRUyy_VChgoLcu4P3Yj0etRMGNFrdbYO/view?usp=share_link) |
+| Teacher                  |    WRN-40-2     | WRN-40-2 | ResNet56 | ResNet110 | ResNet110 | ResNet32x4 | VGG13 |
+|--------------------------|:---------------:|:--------:|:--------:|:---------:|:---------:|:----------:|:-----:|
+| Student                  |    WRN-16-2     | WRN-40-1 | ResNet20 | ResNet20  | ResNet32  | ResNet8x4  | VGG8  |
+| Top-1 accuracy (%) |[75.83](https://drive.google.com/file/d/1pX_bB2pERyKvM_HZVd39XTApUkaB-M1z/view?usp=share_link)  | [75.08](https://drive.google.com/file/d/1G5ZLFzWpb3QArxmDC294C39iekuRI2v0/view?usp=share_link) | [71.45](https://drive.google.com/file/d/1IkUTkivcB2bDuTr_KCxcSh4Cv67eYYtF/view?usp=share_link) | 	  [71.73](https://drive.google.com/file/d/1AdELKGnAYkVRckSdZgHz79Wt2tVn_oym/view?usp=share_link) | [73.65](https://drive.google.com/file/d/1UoTTI3ZVJ_E-WUeLG0b3aprXRgZESrwW/view?usp=share_link) | [76.74](https://drive.google.com/file/d/178rE0i-32pejRJnwtSpNozjQpJGOjn8z/view?usp=share_link)  | [74.19](https://drive.google.com/file/d/1oRUyy_VChgoLcu4P3Yj0etRMGNFrdbYO/view?usp=share_link) |
 
 Our representative student models trained on CIFAR-100 (see the above Table 2). The teacher and student have the different type network architectures.
 
@@ -142,7 +142,7 @@ Our representative student models trained on ImageNet (see the above Table 3, an
 | Teacher  |                                            resnet34                                            | resnet50  |  resnet50  |
 |----------|:----------------------------------------------------------------------------------------------:|:---------:|:----------:|
 | Student  |                                            resnet18                                            | mobilenet | Resnet50_4 |
-| accuracy | [72.14](https://drive.google.com/file/d/129RVoVvBRf6qndf1FO3A3WA1JBaAtiOx/view?usp=share_link) | [74.26](https://drive.google.com/file/d/13xpFnhHBrCjlF61NLhsiFoZd9exsrFbo/view?usp=share_link) | [67.58](https://drive.google.com/file/d/1jIUjfxLv2TvudAZPk7g7H80bg4ggQ3zb/view?usp=share_link)  |
+| Top-1 accuracy (%) | [72.14](https://drive.google.com/file/d/129RVoVvBRf6qndf1FO3A3WA1JBaAtiOx/view?usp=share_link) | [74.26](https://drive.google.com/file/d/13xpFnhHBrCjlF61NLhsiFoZd9exsrFbo/view?usp=share_link) | [67.58](https://drive.google.com/file/d/1jIUjfxLv2TvudAZPk7g7H80bg4ggQ3zb/view?usp=share_link)  |
 
 ## Citation
 
