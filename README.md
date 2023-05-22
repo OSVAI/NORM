@@ -24,7 +24,7 @@ Once the installation is done, you can follow the below steps to run a quick dem
 It will download and save the pretrained models in ./save/models
 
 ## Running
-Here is an example of how to use the code to train student using NORM.
+Here is an example of how to use the code of NORM to train the student model, given a teacher-student network pair.
 ```
 python train_cifar_student.py --path_t ./save/models/resnet32x4_vanilla/ckpt_epoch_240.pth 
 --distill NORM --model_t resnet32x4 --model_s resnet8x4 -r 0.1 -a 0.9 -b 0 --trial test
