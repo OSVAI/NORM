@@ -123,21 +123,21 @@ Table 1:　Top-1 accuracy (%) comparison on ImageNet.
 
 Our representative student models trained by NORM can be downloaded from the following links:
 
-Our representative student models trained on CIFAR-100 (see the above Table 1). The teacher and student have the same type network architectures.
+Student models trained on CIFAR-100 (see the above Table 1). The teacher and student have the same type network architectures.
 
 | Teacher                  |    WRN-40-2     | WRN-40-2 | ResNet56 | ResNet110 | ResNet110 | ResNet32x4 | VGG13 |
 |--------------------------|:---------------:|:--------:|:--------:|:---------:|:---------:|:----------:|:-----:|
 | Student                  |    WRN-16-2     | WRN-40-1 | ResNet20 | ResNet20  | ResNet32  | ResNet8x4  | VGG8  |
 | Top-1 accuracy (%) |[75.83](https://drive.google.com/file/d/1pX_bB2pERyKvM_HZVd39XTApUkaB-M1z/view?usp=share_link)  | [75.08](https://drive.google.com/file/d/1G5ZLFzWpb3QArxmDC294C39iekuRI2v0/view?usp=share_link) | [71.45](https://drive.google.com/file/d/1IkUTkivcB2bDuTr_KCxcSh4Cv67eYYtF/view?usp=share_link) | 	  [71.73](https://drive.google.com/file/d/1AdELKGnAYkVRckSdZgHz79Wt2tVn_oym/view?usp=share_link) | [73.65](https://drive.google.com/file/d/1UoTTI3ZVJ_E-WUeLG0b3aprXRgZESrwW/view?usp=share_link) | [76.74](https://drive.google.com/file/d/178rE0i-32pejRJnwtSpNozjQpJGOjn8z/view?usp=share_link)  | [74.19](https://drive.google.com/file/d/1oRUyy_VChgoLcu4P3Yj0etRMGNFrdbYO/view?usp=share_link) |
 
-Our representative student models trained on CIFAR-100 (see the above Table 2). The teacher and student have the different type network architectures.
+Student models trained on CIFAR-100 (see the above Table 2). The teacher and student have the different type network architectures.
 
 | Teacher  |    VGG13    |                                            ResNet50                                            | ResNet50  |  ResNet32x4  |  ResNet32x4  |   WRN-40-2   |
 |----------|:-----------:|:----------------------------------------------------------------------------------------------:|:---------:|:------------:|:------------:|:------------:|
 | Student  | MobileNetV2 |                                          MobileNetV2                                           |   VGG8    | ShuffleNetV1 | ShuffleNetV2 | ShuffleNetV1 |
 | accuracy |  [69.11](https://drive.google.com/file/d/1-Xk2q7qthfbBtXnR6XuBl8aN6rRKGNnF/view?usp=share_link)  | [71.27](https://drive.google.com/file/d/1ixtRd2JEXeUGGTS2e8c23KSc4tEdH0y3/view?usp=share_link) | [75.43](https://drive.google.com/file/d/1kkYpT1OprZB9ah-T-B3r8qN5TrNS3dvq/view?usp=share_link) |  [77.19](https://drive.google.com/file/d/16S1m69zrdPSugjs1J90vDrIbbSTUc-aj/view?usp=share_link)   |  [78.09](https://drive.google.com/file/d/1HS-cPVvocJmgO07kkndGHVBBIayyBzH5/view?usp=share_link)   |  [77.13](https://drive.google.com/file/d/1Hu6kASoFB_yKxaibQZHi6_fbLbYrY9VQ/view?usp=share_link)   |
 
-Our representative student models trained on ImageNet (see the above Table 3, and Table 6 of our paper). The teacher and student have the same/different type network architectures.
+Student models trained on ImageNet (see the above Table 3, and Table 6 of our paper). The teacher and student have the same/different type network architectures.
 
 | Teacher  |                                            resnet34                                            | resnet50  |  resnet50  |
 |----------|:----------------------------------------------------------------------------------------------:|:---------:|:----------:|
