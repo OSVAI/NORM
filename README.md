@@ -36,7 +36,7 @@ where
 - `--distill`: specify the method of NORM and its augmented variants. We implemented NORM, NORM+KD and NORM+CL (NORM_CRD) for teacher-student network pairs on CIFAR100, and NORM on ImageNet.
 - `--model_t`: name of the pre-trained teacher model. Configurations of all teacher-student network pairs can be found in train_cifar_sutdent.py and tranin_imagenet_student.py.
 - `--model_s`: name of the target student model. Configurations of all teacher-student network pairs can be found in train_cifar_sutdent.py and tranin_imagenet_student.py.
-- `-r`: the weight of the standard CE loss based on ground truth labels of training data.
+- `-r`: the weight of the standard CE loss based on the ground truth labels of training data.
 - `-b`: the hyper-parameter $\alpha$ in our paper of NORM, weighting the NORM loss.
 - `-a`: the hyper-parameter $\beta$ in our paper of NORM, weighting the vanilla KD loss defined as the KL divergence between the teacher and student logits.
 - `-s`: the hyper-parameter $N$ in our paper of NORM, making the student representation have N times feature channels than the teacher representation.
