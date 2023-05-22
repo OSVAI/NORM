@@ -31,15 +31,15 @@ python train_cifar_student.py --path_t ./save/models/resnet32x4_vanilla/ckpt_epo
 ```
 where
 - `--path_t`: specify the path of teacher.
-- `--distill`: specify the method of NORM and its augmented variants. We have implemented NORM and NORM_CRD for teacher student pairs on CIFAR100 and NORM for ImageNet.
-- `--model_t`: name of the teacher model. Configuratiosn of all teacher-student pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
-- `--model_s`: name of the student model. Configuratiosn of all teacher-student pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
+- `--distill`: specify the method of NORM and its augmented variants. We have implemented NORM and NORM_CRD for teache-student network pairs on CIFAR100 and NORM for ImageNet.
+- `--model_t`: name of the teacher model. Configuratiosn of all teacher-student network pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
+- `--model_s`: name of the student model. Configuratiosn of all teacher-student network pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
 - `-r`: the weight of the standard CE loss based on ground truth labels.
 - `-a`: the weight of the normal KD loss, which uses KL divergence between teacher and student logits.
 - `-b`: the weight of NORM loss.
 - `-s`: the hyper-parametr $N$ in the paper of NORM, i.e., making the student representation have N times feature channels than the teacher representation.
-- `--trial`: the comments attach to each experiment.
-other more parameters can refer to train_cifar_sutdent.py and tranin_imagenet_student.py.
+- `--trial`: the comments for each teacher-student network pair.
+other parameters are referred to train_cifar_sutdent.py and tranin_imagenet_student.py.
 
 ## Results
 
