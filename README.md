@@ -30,12 +30,12 @@ python train_cifar_student.py --path_t ./save/models/resnet32x4_vanilla/ckpt_epo
 --distill NORM --model_t resnet32x4 --model_s resnet8x4 -r 0.1 -a 0.9 -b 0 --trial test
 ```
 where
-- `--path_t`: specify the path of teacher.
-- `--distill`: specify the method of NORM and its augmented variants. We have implemented NORM and NORM_CRD for teache-student network pairs on CIFAR100 and NORM for ImageNet.
-- `--model_t`: name of the teacher model. Configuratiosn of all teacher-student network pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
-- `--model_s`: name of the student model. Configuratiosn of all teacher-student network pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
-- `-r`: the weight of the standard CE loss based on ground truth labels.
-- `-a`: the weight of the normal KD loss, which uses KL divergence between teacher and student logits.
+- `--path_t`: specify the path of the pre-trained teacher model.
+- `--distill`: specify the method of NORM and its augmented variants. We implemented NORM and NORM_CRD for teache-student network pairs on CIFAR100, and NORM for ImageNet.
+- `--model_t`: name of the pre-trained teacher model. Configurations of all teacher-student network pairs can be found in train_cifar_sutdent.py and tranin_imagenet_student.py.
+- `--model_s`: name of the target student model. Configurations of all teacher-student network pairs can be found in train_cifar_sutdent.py and tranin_imagenet_student.py.
+- `-r`: the weight of the standard CE loss based on ground truth labels of training datas.
+- `-a`: the weight of the vanilla KD loss defined as the KL divergence between teacher and student logits.
 - `-b`: the weight of NORM loss.
 - `-s`: the hyper-parametr $N$ in the paper of NORM, i.e., making the student representation have N times feature channels than the teacher representation.
 - `--trial`: the comments for each teacher-student network pair.
@@ -119,21 +119,21 @@ Top-1 accuracy (%) comparison on ImageNet.
 
 Some representative student models trained by us can be downloaded from the following links:
 
-Our student models trained on CIFAR-100 (see the above Table 1). The teacher and student have the same type network architectures.
+Representative student models trained on CIFAR-100 (see the above Table 1). The teacher and student have the same type network architectures.
 
 | Teacher  |                                            wrn-40-2                                            |                                            wrn-40-2                                             | resnet56  |  resnet110   | resnet110 | resnet32x4 |   vgg13   |
 |----------|:----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:---------:|:------------:|:---------:|:----------:|:---------:|
 | Student  |                                            wrn-16-2                                            |                                            wrn-40-1                                             | resnet20  |  	resnet20   | 	resnet32 | resnet8x4  |   vgg8    |
 | accuracy |[75.83](https://drive.google.com/file/d/1pX_bB2pERyKvM_HZVd39XTApUkaB-M1z/view?usp=share_link)  | [75.08](https://drive.google.com/file/d/1G5ZLFzWpb3QArxmDC294C39iekuRI2v0/view?usp=share_link) | [71.45](https://drive.google.com/file/d/1IkUTkivcB2bDuTr_KCxcSh4Cv67eYYtF/view?usp=share_link) | 	  [71.73](https://drive.google.com/file/d/1AdELKGnAYkVRckSdZgHz79Wt2tVn_oym/view?usp=share_link) | [73.65](https://drive.google.com/file/d/1UoTTI3ZVJ_E-WUeLG0b3aprXRgZESrwW/view?usp=share_link) | [76.74](https://drive.google.com/file/d/178rE0i-32pejRJnwtSpNozjQpJGOjn8z/view?usp=share_link)  | [74.19](https://drive.google.com/file/d/1oRUyy_VChgoLcu4P3Yj0etRMGNFrdbYO/view?usp=share_link) |
 
-Our student models trained on CIFAR-100 (see the above Table 2). The teacher and student have the different type network architectures.
+Representative student models trained on CIFAR-100 (see the above Table 2). The teacher and student have the different type network architectures.
 
 | Teacher  |    VGG13    |                                            ResNet50                                            | ResNet50  |  ResNet32x4  |  ResNet32x4  |   WRN-40-2   |
 |----------|:-----------:|:----------------------------------------------------------------------------------------------:|:---------:|:------------:|:------------:|:------------:|
 | Student  | MobileNetV2 |                                          MobileNetV2                                           |   VGG8    | ShuffleNetV1 | ShuffleNetV2 | ShuffleNetV1 |
 | accuracy |  [69.11](https://drive.google.com/file/d/1-Xk2q7qthfbBtXnR6XuBl8aN6rRKGNnF/view?usp=share_link)  | [71.27](https://drive.google.com/file/d/1ixtRd2JEXeUGGTS2e8c23KSc4tEdH0y3/view?usp=share_link) | [75.43](https://drive.google.com/file/d/1kkYpT1OprZB9ah-T-B3r8qN5TrNS3dvq/view?usp=share_link) |  [77.19](https://drive.google.com/file/d/16S1m69zrdPSugjs1J90vDrIbbSTUc-aj/view?usp=share_link)   |  [78.09](https://drive.google.com/file/d/1HS-cPVvocJmgO07kkndGHVBBIayyBzH5/view?usp=share_link)   |  [77.13](https://drive.google.com/file/d/1Hu6kASoFB_yKxaibQZHi6_fbLbYrY9VQ/view?usp=share_link)   |
 
-Our student models trained on ImageNet (see the above Table 3, and Table 6 of our paper). The teacher and student have the same/different type network architectures.
+Representative student models trained on ImageNet (see the above Table 3, and Table 6 of our paper). The teacher and student have the same/different type network architectures.
 
 | Teacher  |                                            resnet34                                            | resnet50  |  resnet50  |
 |----------|:----------------------------------------------------------------------------------------------:|:---------:|:----------:|
