@@ -139,9 +139,9 @@ Student models trained on CIFAR-100 (see the above Table 2). The teacher and stu
 
 Student models trained on ImageNet (see the above Table 3, and Table 6 of our paper). The teacher and student have the same/different type network architectures.
 
-| Teacher  |                                            resnet34                                            | resnet50  |  resnet50  |
+| Teacher  |                                            ResNet34                                            | ResNet50  |  ResNet50  |
 |----------|:----------------------------------------------------------------------------------------------:|:---------:|:----------:|
-| Student  |                                            resnet18                                            | mobilenet | Resnet50_4 |
+| Student  |                                            ResNet18                                            | MobileNet | ResNet50-1/4 |
 | Top-1 accuracy (%) | [72.14](https://drive.google.com/file/d/129RVoVvBRf6qndf1FO3A3WA1JBaAtiOx/view?usp=share_link) | [74.26](https://drive.google.com/file/d/13xpFnhHBrCjlF61NLhsiFoZd9exsrFbo/view?usp=share_link) | [67.58](https://drive.google.com/file/d/1jIUjfxLv2TvudAZPk7g7H80bg4ggQ3zb/view?usp=share_link)  |
 
 ## Citation
