@@ -31,20 +31,19 @@ python train_cifar_student.py --path_t ./save/models/resnet32x4_vanilla/ckpt_epo
 ```
 where
 - `--path_t`: specify the path of teacher.
-- `--distill`: specify the method of distillation. We have implemented NORM and NORM_CRD for teacher student pairs on CIFAR100 and NORM for ImageNet.
-- `--model_t`: name of the teacher model. All the implemented can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
-- `--model_s`: name of the student model. More options can refer to files the same as the teacher.
-- `-r`: the weight of the CE loss between logits and the ground truth for student model.
+- `--distill`: specify the method of NORM and its augmented variants. We have implemented NORM and NORM_CRD for teacher student pairs on CIFAR100 and NORM for ImageNet.
+- `--model_t`: name of the teacher model. Configuratiosn of all teacher-student pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
+- `--model_s`: name of the student model. Configuratiosn of all teacher-student pairs can be found in arguments in train_cifar_sutdent.py and tranin_imagenet_student.py.
+- `-r`: the weight of the standard CE loss based on ground truth labels.
 - `-a`: the weight of the normal KD loss, which uses KL divergence between teacher and student logits.
 - `-b`: the weight of NORM loss.
-- `-s`: the NORM multiple parameter.
+- `-s`: the hyper-parametr $N$ in the paper of NORM, i.e., making the student representation have N times feature channels than the teacher representation.
 - `--trial`: the comments attach to each experiment.
-other more parameters can refer to the train file.
+other more parameters can refer to train_cifar_sutdent.py and tranin_imagenet_student.py.
 
 ## Results
 
-we provide part of our results as follows:
-experiments on CIFAR100 with same network structure.
+Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and student have the same type network architectures.
 
 | Teacher                  |    WRN-40-2     | WRN-40-2 | ResNet56 | ResNet110 | ResNet110 | ResNet32x4 | VGG13 |
 |--------------------------|:---------------:|:--------:|:--------:|:---------:|:---------:|:----------:|:-----:|
@@ -78,7 +77,7 @@ experiments on CIFAR100 with same network structure.
 | NOMR+CL                  |      76.02      |  75.37   |  71.51   |   71.90   |   73.81   |   76.49    | 73.58 
 
 
-Experiments on CIFAR100 with heterogeneous network structure.
+Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and student have different type network architectures.
 
 | Teacher                      |    VGG13    |  ResNet50   | ResNet50 |  ResNet32x4  |  ResNet32x4 |  WRN-40-2  |
 ------------------------------|:-----------:|:-----------:|:--------:|:------------:|:------------:|:----------:|
@@ -110,7 +109,7 @@ Experiments on CIFAR100 with heterogeneous network structure.
  NORM+KD                      |    69.38    |    71.17    |  75.67   |    77.79     |    78.32     |   77.63    |
  NOMR+CL                      |   69.17     |    71.08    |  75.51   |    77.50     |    77.96     |   77.09    |
 
-Results on ImageNet.
+Top-1 accuracy (%) comparison on ImageNet. 
 
 | Teacher         |     Student      |  CC   |  SP   |  ONE  | SSKD  |  KD   |  AT   |  OFD  |  RKD  |  CRD  | SRRL  | SemCKD | ReviewKD | SimKD | DistPro | NORM|
 |-----------------|:----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:--------:|:-----:|:-------:|:---:|
@@ -118,22 +117,23 @@ Results on ImageNet.
 | ResNet50(76.16) | MobileNet(69.63) |  n/a  |  n/a  |  n/a  |  n/a  | 70.68 | 70.72 | 71.25 | 71.32 | 71.40 | 72.49 |  n/a   |  72.56   |  n/a  |  73.26  |74.26|
 
 
-The weights trained by us can be downloaded from the following tables:
-Weights on CIFAR-100 with same structure.
+Some representative student models trained by us can be downloaded from the following links:
+
+Our student models trained on CIFAR-100 (see the above Table 1). The teacher and student have the same type network architectures.
 
 | Teacher  |                                            wrn-40-2                                            |                                            wrn-40-2                                             | resnet56  |  resnet110   | resnet110 | resnet32x4 |   vgg13   |
 |----------|:----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:---------:|:------------:|:---------:|:----------:|:---------:|
 | Student  |                                            wrn-16-2                                            |                                            wrn-40-1                                             | resnet20  |  	resnet20   | 	resnet32 | resnet8x4  |   vgg8    |
 | accuracy |[75.83](https://drive.google.com/file/d/1pX_bB2pERyKvM_HZVd39XTApUkaB-M1z/view?usp=share_link)  | [75.08](https://drive.google.com/file/d/1G5ZLFzWpb3QArxmDC294C39iekuRI2v0/view?usp=share_link) | [71.45](https://drive.google.com/file/d/1IkUTkivcB2bDuTr_KCxcSh4Cv67eYYtF/view?usp=share_link) | 	  [71.73](https://drive.google.com/file/d/1AdELKGnAYkVRckSdZgHz79Wt2tVn_oym/view?usp=share_link) | [73.65](https://drive.google.com/file/d/1UoTTI3ZVJ_E-WUeLG0b3aprXRgZESrwW/view?usp=share_link) | [76.74](https://drive.google.com/file/d/178rE0i-32pejRJnwtSpNozjQpJGOjn8z/view?usp=share_link)  | [74.19](https://drive.google.com/file/d/1oRUyy_VChgoLcu4P3Yj0etRMGNFrdbYO/view?usp=share_link) |
 
-Weights on CIFAR-100 with different structure.
+Our student models trained on CIFAR-100 (see the above Table 2). The teacher and student have the different type network architectures.
 
 | Teacher  |    VGG13    |                                            ResNet50                                            | ResNet50  |  ResNet32x4  |  ResNet32x4  |   WRN-40-2   |
 |----------|:-----------:|:----------------------------------------------------------------------------------------------:|:---------:|:------------:|:------------:|:------------:|
 | Student  | MobileNetV2 |                                          MobileNetV2                                           |   VGG8    | ShuffleNetV1 | ShuffleNetV2 | ShuffleNetV1 |
 | accuracy |  [69.11](https://drive.google.com/file/d/1-Xk2q7qthfbBtXnR6XuBl8aN6rRKGNnF/view?usp=share_link)  | [71.27](https://drive.google.com/file/d/1ixtRd2JEXeUGGTS2e8c23KSc4tEdH0y3/view?usp=share_link) | [75.43](https://drive.google.com/file/d/1kkYpT1OprZB9ah-T-B3r8qN5TrNS3dvq/view?usp=share_link) |  [77.19](https://drive.google.com/file/d/16S1m69zrdPSugjs1J90vDrIbbSTUc-aj/view?usp=share_link)   |  [78.09](https://drive.google.com/file/d/1HS-cPVvocJmgO07kkndGHVBBIayyBzH5/view?usp=share_link)   |  [77.13](https://drive.google.com/file/d/1Hu6kASoFB_yKxaibQZHi6_fbLbYrY9VQ/view?usp=share_link)   |
 
-Weights on ImageNet.
+Our student models trained on ImageNet (see the above Table 3, and Table 6 of our paper). The teacher and student have the same/different type network architectures.
 
 | Teacher  |                                            resnet34                                            | resnet50  |  resnet50  |
 |----------|:----------------------------------------------------------------------------------------------:|:---------:|:----------:|
@@ -147,12 +147,14 @@ If you find this repo useful for your research, please consider citing the paper
   title={NORM: Knowledge Distillation via N-to-One Representation Matching},
   author={Liu, Xiaolong and Li, Lujun and Li, Chao and Yao, Anbang},
   booktitle={The Eleventh International Conference on Learning Representations}
+  year={2023},
+  url={https://openreview.net/pdf?id=CRNwGauQpb6}
 }
 
 
 ```
 ## Acknowledgement
-We have push our work forward by referring to the work of [RepDistiller](https://github.com/HobbitLong/RepDistiller), and we show much gratitude for them.
+This repository is built based on [RepDistiller](https://github.com/HobbitLong/RepDistiller). We thank the authors for releasing their amazing codes.
 
 
 
