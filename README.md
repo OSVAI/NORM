@@ -142,11 +142,11 @@ Student models trained on ImageNet (see the above Table 3, and Table 6 of our pa
 | Teacher  |                                            ResNet34                                            | ResNet50  |  ResNet50  |
 |----------|:----------------------------------------------------------------------------------------------:|:---------:|:----------:|
 | Student  |                                            ResNet18                                            | MobileNet | ResNet50-1/4 |
-| Top-1 accuracy (%) | [72.14](https://drive.google.com/file/d/129RVoVvBRf6qndf1FO3A3WA1JBaAtiOx/view?usp=share_link) | [74.26](https://drive.google.com/file/d/13xpFnhHBrCjlF61NLhsiFoZd9exsrFbo/view?usp=share_link) | [67.58](https://drive.google.com/file/d/1jIUjfxLv2TvudAZPk7g7H80bg4ggQ3zb/view?usp=share_link)  |
+| Top-1 accuracy (%) | [72.14](https://drive.google.com/file/d/129RVoVvBRf6qndf1FO3A3WA1JBaAtiOx/view?usp=share_link) | [74.26](https://drive.google.com/file/d/13xpFnhHBrCjlF61NLhsiFoZd9exsrFbo/view?usp=share_link) | [68.03](https://drive.google.com/file/d/1jIUjfxLv2TvudAZPk7g7H80bg4ggQ3zb/view?usp=share_link)  |
 
 ## Citation
 
-If you find this repo useful for your research, please consider citing the paper.
+If you find this repo useful to your research, please consider citing:
 ```
 @inproceedings{liunorm,
   title={NORM: Knowledge Distillation via N-to-One Representation Matching},
