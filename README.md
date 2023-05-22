@@ -146,7 +146,7 @@ If you find this repo useful for your research, please consider citing the paper
 @inproceedings{liunorm,
   title={NORM: Knowledge Distillation via N-to-One Representation Matching},
   author={Liu, Xiaolong and Li, Lujun and Li, Chao and Yao, Anbang},
-  booktitle={The Eleventh International Conference on Learning Representations}
+  booktitle={The Eleventh International Conference on Learning Representations},
   year={2023},
   url={https://openreview.net/pdf?id=CRNwGauQpb6}
 }
