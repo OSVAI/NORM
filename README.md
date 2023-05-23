@@ -33,7 +33,7 @@ python train_cifar_student.py --path_t ./save/models/resnet32x4_vanilla/ckpt_epo
 ```
 where
 - `--path_t`: specify the path of the pre-trained teacher model.
-- `--distill`: specify the method of NORM and its augmented variants. We implemented NORM, NORM+KD and NORM+CL (NORM_CRD) for teacher-student network pairs on CIFAR100, and NORM on ImageNet.
+- `--distill`: specify the method of NORM and its augmented variants. We implemented NORM, NORM+KD and NORM+CRD (NORM_CRD) for teacher-student network pairs on CIFAR100, and NORM on ImageNet.
 - `--model_t`: name of the pre-trained teacher model. Configurations of all teacher-student network pairs can be found in train_cifar_sutdent.py and tranin_imagenet_student.py.
 - `--model_s`: name of the target student model. Configurations of all teacher-student network pairs can be found in train_cifar_sutdent.py and tranin_imagenet_student.py.
 - `-r`: the weight of the standard CE loss based on the ground truth labels of training data.
