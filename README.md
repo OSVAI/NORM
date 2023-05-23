@@ -76,7 +76,7 @@ Table 1:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and stud
 | NORM     (w/ 1 plain FT) |  75.57   |  74.78   |   70.70   |   71.01   |   73.27    | 76.76 |73.64
 | NORM                     |      75.65      |  74.82   |  71.35   |   71.55   |   73.67   |   76.49    | 73.95 
 | NORM+KD                  |      76.26      |  75.42   |  71.61   |   72.00   |   73.95   |   76.98    | 74.46 
-| NOMR+CL                  |      76.02      |  75.37   |  71.51   |   71.90   |   73.81   |   76.49    | 73.58 
+| NOMR+CRD                  |      76.02      |  75.37   |  71.51   |   71.90   |   73.81   |   76.49    | 73.58 
 
 
 Table 2:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and student have different type network architectures.
@@ -109,7 +109,7 @@ Table 2:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and stud
  NORM (w/ plain FT)           |    69.37    |    70.94    |  74.37   |    75.93     |    77.34     |   76.61    |
  NORM                         |    68.94    |    70.56    |  75.17   |    77.42     |    78.07     |   77.06    |
  NORM+KD                      |    69.38    |    71.17    |  75.67   |    77.79     |    78.32     |   77.63    |
- NOMR+CL                      |   69.17     |    71.08    |  75.51   |    77.50     |    77.96     |   77.09    |
+ NOMR+CRD                      |   69.17     |    71.08    |  75.51   |    77.50     |    77.96     |   77.09    |
 
 Table 1:　Top-1 accuracy (%) comparison on ImageNet. 
 
