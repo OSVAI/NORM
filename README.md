@@ -45,7 +45,7 @@ where
 
 ## Main Results
 
-Table 1:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and student have the same type network architectures.
+Table 1:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and student have the same type network architectures. The results of the current mainstream KD methods are obtained from the papers of CRD, SemCKD, ReviewKD, SimKD and DistPro. The plain FT and the default FT denote our student feature transform module without and with a linear residual connection, respectively. NORM+KD and NORM+CRD denote combining NORM with the vanilla logits based KD and the contrastive KD, respectively.
 
 | Teacher                  |    WRN-40-2     | WRN-40-2 | ResNet56 | ResNet110 | ResNet110 | ResNet32x4 | VGG13 |
 |--------------------------|:---------------:|:--------:|:--------:|:---------:|:---------:|:----------:|:-----:|
@@ -79,7 +79,7 @@ Table 1:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and stud
 | NOMR+CRD                  |      76.02      |  75.37   |  71.51   |   71.90   |   73.81   |   76.49    | 73.58 
 
 
-Table 2:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and student have different type network architectures.
+Table 2:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and student have different type network architectures. The results of the current mainstream KD methods are obtained from the papers of CRD, SemCKD, ReviewKD, SimKD and DistPro. The plain FT and the default FT denote our student feature transform module without and with a linear residual connection, respectively. NORM+KD and NORM+CRD denote combining NORM with the vanilla logits based KD and the contrastive KD, respectively.
 
 | Teacher                      |    VGG13    |  ResNet50   | ResNet50 |  ResNet32x4  |  ResNet32x4 |  WRN-40-2  |
 ------------------------------|:-----------:|:-----------:|:--------:|:------------:|:------------:|:----------:|
@@ -111,7 +111,7 @@ Table 2:　Top-1 mean accuracy (%) comparison on CIFAR-100. The teacher and stud
  NORM+KD                      |    69.38    |    71.17    |  75.67   |    77.79     |    78.32     |   77.63    |
  NOMR+CRD                      |   69.17     |    71.08    |  75.51   |    77.50     |    77.96     |   77.09    |
 
-Table 1:　Top-1 accuracy (%) comparison on ImageNet. 
+Table 3:　Top-1 accuracy (%) comparison on ImageNet. The results in the bracket are for our reproduced student baselines, and the results of the current mainstream KD methods are obtained from the papers of CRD, SSKD, SRRL, SemCKD, ReviewKD, SimKD and DistPro.
 
 | Teacher         |     Student      |  CC   |  SP   |  ONE  | SSKD  |  KD   |  AT   |  OFD  |  RKD  |  CRD  | SRRL  | SemCKD | ReviewKD | SimKD | DistPro | NORM|
 |-----------------|:----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:--------:|:-----:|:-------:|:---:|
