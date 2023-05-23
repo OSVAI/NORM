@@ -146,7 +146,7 @@ Student models trained on ImageNet (see the above Table 3, and Table 6 of our pa
 
 ## Citation
 
-If you find this repo useful to your research, please consider citing:
+If you find this repository useful to your research, please consider citing:
 ```
 @inproceedings{liunorm,
   title={NORM: Knowledge Distillation via N-to-One Representation Matching},
