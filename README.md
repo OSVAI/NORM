@@ -2,7 +2,7 @@
 
 By Xiaolong Liu, Lujun Li, Chao Li and Anbang Yao.
 
-This repository is an official PyTorch implementation of "[NORM: Knowledge Distillation via N-to-One Representation Matching](https://openreview.net/pdf?id=CRNwGauQpb6)" published in ICLR 2023. NORM, the first knowledge distillation work with a novel N-to-one representation matching formulation, which can be readily used to boost the performance of efficient neural networks for different visual recognition tasks.
+This repository is an official PyTorch implementation of "[NORM: Knowledge Distillation via N-to-One Representation Matching](https://openreview.net/pdf?id=CRNwGauQpb6)" published in ICLR 2023. NORM, the first knowledge distillation framework with a novel N-to-one representation matching formulation, which can be readily used to boost the performance of efficient neural networks for different visual recognition tasks.
 
 ## Installation
 
