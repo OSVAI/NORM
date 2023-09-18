@@ -8,7 +8,7 @@ This repository is an official PyTorch implementation of "[NORM: Knowledge Disti
 
 This framework is implemented under Pytorch 1.10.1, Python 3.8.5 and CUDA 11.6. It's better to implement an independent virtual environment on machine. 
 ```
-conda create -n pt1101 python=1.10.1
+conda create -n pt1101 python=3.8.5
 source activate pt1101
 pip install torch  # install Pytorch if you do not have it
 ```
